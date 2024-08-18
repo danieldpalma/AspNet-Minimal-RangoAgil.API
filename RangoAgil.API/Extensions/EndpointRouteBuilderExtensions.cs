@@ -25,5 +25,10 @@ public static class EndpointRouteBuilderExtensions
         var ingredientsEndpoint = endpointRouteBuilder.MapGroup("/rangos/{rangoId:int}/ingredients");
 
         ingredientsEndpoint.MapGet("", IngredientsHandlers.GetIngredientsAsync);
+
+        ingredientsEndpoint.MapPost("", () =>
+        {
+            throw new NotImplementedException();
+        });
     }
 }
